@@ -7,7 +7,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  margin: 40px;
+  margin: 0px;
   font-family: 'Raleway', sans-serif;
 }
 .text-right {
@@ -41,8 +41,8 @@ input {
   border: 1px solid black;
 }
 .div-salir-coder{
-  width: 90vw;
-  height: 90vh;
+  width: 100vw;
+  height: 100vh;
   background-color: #FAAE27;
   font-size: 50px;
   text-align: center;

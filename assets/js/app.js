@@ -55,8 +55,8 @@ function listarCoders(){
     document.getElementsByClassName("div-coder")[i].innerHTML +="Nombre: "+coders[i].nombre+"<br>"+
     "Apellido: "+coders[i].apellido+"<br>"+
     "Promoción: "+coders[i].promocion+"<br>"+
-    "Estado: "+coders[i].estado;   
-  } 
+    "Estado: "+coders[i].estado;
+  }
 }listarCoders();
 //validando radio-button
 var selected1;
