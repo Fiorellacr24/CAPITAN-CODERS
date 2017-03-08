@@ -1,5 +1,8 @@
-//Botones
+//BOTONES
+
+//divtexte es id del boton seleccionado
 var mostrarOcultar = function(divtexte) {
+//Guardo Ids
   var text1 = document.getElementById('sprint-1');
   var text2 = document.getElementById('sprint-2');
   var text3 = document.getElementById('sprint-3');
@@ -21,6 +24,7 @@ var mostrarOcultar = function(divtexte) {
   }
 }
 
+//DROPDOWN BUTTON
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
@@ -52,15 +56,15 @@ var coders = [ { nombre : "Meche", apellido : "Zubieta",  promocion : "1era. pro
 
 function listarCoders(){
   for (var i=0; i<coders.length;i++){
-    document.getElementsByClassName("div-coder")[i].innerHTML +="Nombre: "+coders[i].nombre+"<br>"+
-    "Apellido: "+coders[i].apellido+"<br>"+
-    "Promoción: "+coders[i].promocion+"<br>"+
+    document.getElementsByClassName("div-coder")[i].innerHTML +="Nombre: "+coders[i].nombre+"<p>"+
+    "Apellido: "+coders[i].apellido+"<p>"+
+    "Promoción: "+coders[i].promocion+"<p>"+
     "Estado: "+coders[i].estado;
   }
 }listarCoders();
-//validando radio-button
+
+//VALIDANDO RADIO BUTTON
 var selected1;
-//var contador1 = 0;
 
 function validando0() {
   selected1 = false;
