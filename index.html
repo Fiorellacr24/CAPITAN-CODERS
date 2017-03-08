@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Capitan</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,400,700">
+</head>
+<body>
+	<div class="contenedor-contenido-pagina">
+		<div class="dropdown">Hola coder
+			<span id="name"></span>
+			<button onclick="myFunction()" class="dropbtn">&#9776;</button>
+			<div id="myDropdown" class="dropdown-content">
+				<a href="perfil.html" >Perfil</a>
+				<a href="salir.html">Salir</a>
+			</div>
+		</div>
+
+	</div>
+	<div>
+		<header>
+			<img src="assets/img/laboratoria.jpg" alt="">
+		</header>
+	</div>
+
+	<div >
+		<h1>¿Qué es Laboratoria?</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus provident facilis explicabo, voluptates ullam animi voluptatem enim quam ad aliquid totam vel dignissimos architecto laudantium voluptatum iure, modi. Voluptates, dolorem!</p>
+
+		<h3>Temas</h3>
+
+		<button onclick="mostrarOcultar('sprint-1');">Sprint 1</button>
+		<button onclick="mostrarOcultar('sprint-2');">Sprint 2</button>
+		<button onclick="mostrarOcultar('sprint-3');">Sprint 3</button>
+	</div>
+
+	<div id="sprint-1" class="hidden">
+		<h3>Sprint 1:</h3>
+		<p><strong>Introducción al javascript:</strong></p>
+		<ol>
+			<li>Fundamentos de la programación</li>
+			<li>funciones</li>
+			<li>Arreglos</li>
+			<li>Objetos</li>
+		</ol>
+		<hr>
+
+		<p><strong>Quiz</strong></p>
+		<div id="print-quiz-result"></div>
+		<div id="contenido1">
+			<form  onsubmit="return false">
+				<label for="q1"><strong>Existen dos tipos de funciones</strong></label><br><br>
+				<input type="radio" name="test0" id="0" >Expresadas y declaradas<br>
+				<input type="radio" name="test0" id="1" >Explícitas y declaradas<br>
+				<input type="radio" name="test0" id="2" >Expresadas y derivadas<br><br>
+
+				<label for="q1"><strong>Elige una propiedad de los arreglos</strong></label><br><br>
+				<input type="radio" name="test1" id="3" >Add<br>
+				<input type="radio" name="test1" id="4" >Clear<br>
+				<input type="radio" name="test1" id="5" >Pop<br><br>
+
+				<label for="q1"><strong>Un objeto tiene ______ y ______</strong></label><br><br>
+				<input type="radio" name="test2" id="6" >Números y letras<br>
+				<input type="radio" name="test2" id="7" >Partes y validaciones<br>
+				<input type="radio" name="test2" id="8" >Propiedades y valores<br>
+				<br><br>
+				<button type="submit" name="button" onclick="validarSprintUno()">enviar</button>
+			</form>
+		</div>
+	</div>
+
+	<div id="sprint-2" >
+		<h3>Sprint 2:</h3>
+		<p><strong>Introducción al desarrollo web y construcción de páginas web:</strong></p>
+		<ol>
+			<li>Ciclo de vida del desarrolllo web y arquitectura báscia cliente/servidor</li>
+			<li>HTML y javascript en el servidor</li>
+			<li>Manejo de comandos másicos en el git y terminal</li>
+			<li>Pruebas unitarias</li>
+			<li>Git/Resolución de conflictos/git branch model</li>
+			<li>DOM</li>
+		</ol>
+		<hr>
+
+		<p><strong>Quiz</strong></p>
+		<div id="print-quiz-result2"></div>
+		<div id="contenido2">
+			<form  onsubmit="return false">
+				<form>
+					<label for="q1"><strong>¿cuál es el comando para iniciar un repositorio desde la consola?</strong></label><br><br>
+					<input type="radio" name="test3" id="0" >git init .<br>
+					<input type="radio" name="test3" id="1" >git init<br>
+					<input type="radio" name="test3" id="2" >git init add<br><br>
+				</form>
+				<form>
+					<label for="q1"><strong>¿Cuál es la finalidad de hacer una prueba unitaria?</strong></label><br><br>
+					<input type="radio" name="test4" id="3" >Comprobar que el código funciona correctamente<br>
+					<input type="radio" name="test4" id="4" >Darle valores a los parámetos de dichas funciones<br>
+					<input type="radio" name="test4" id="5" >No tiene ningún fin<br><br>
+				</form>
+				<form>
+					<label for="q1"><strong>¿Qué significa DOM?</strong></label><br><br>
+					<input type="radio" name="test5" id="6" >Dual Object Model<br>
+					<input type="radio" name="test5" id="7" >Document Object Model<br>
+					<input type="radio" name="test5" id="8" >Document Obsolet Model<br>
+					<br><br>
+				</form>
+				<button type="submit" name="button" onclick="validarSprintDos()">enviar</button>
+			</form>
+		</div>
+	</div>
+	<div id="sprint-3" class="hidden">
+		<h3>Sprint 3:</h3>
+		<p>No hay lecciones (todavía)</p>
+	</div>
+</div>
+
+<script type="text/javascript" src="assets/js/app.js"></script>
+<script>
+	var myParam = location.search.split('nombre=')[1]
+	var nombre = document.getElementById('name');
+	if (myParam == undefined) {
+		var inicio = prompt('Cual es tu nombre');
+		nombre.innerHTML = inicio;
+	} else {
+		nombre.innerHTML = myParam;
+	}
+	document.getElementById("coder").addEventListener('click',function() {
+		this.href += "?nombre="+nombre.innerHTML;
+	})
+</script>
+</body>
+</html>

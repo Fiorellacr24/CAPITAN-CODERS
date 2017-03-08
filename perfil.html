@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,400,700">
+	<title>Perfil</title>
+</head>
+<body>	
+	<form>
+		<div class="div-coder"></div>
+		<div class="div-coder"></div>
+		<div class="div-coder"></div>
+		<div class="div-coder"></div>
+		<div class="div-coder"></div>
+		<div class="div-coder"></div>
+		<div class="div-coder"></div>
+		<div class="div-coder"></div>
+
+	<center>
+	<br>
+	<br>
+		<button><a href="index.html" id="return">Regresar al Inicio</a></button>
+	</center>
+	
+	</form>
+<script type="text/javascript" src = "assets/js/app.js"> </script>
+
+<script> 
+	var myParam = location.search.split('nombre=')[1]
+        document.getElementById("return").addEventListener('click',function(e) {
+            this.href += "?nombre="+myParam;
+        })
+</script>
+</body>
+</html>
+
